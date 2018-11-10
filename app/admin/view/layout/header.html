@@ -1,0 +1,68 @@
+<body class="hold-transition skin-blue sidebar-mini">
+{include file="../app/common/view/fakeloader.html" /}
+<script src="__STATIC__/module/admin/js/init_body.js"></script>
+<div class="wrapper">
+  <header class="main-header">
+    <!-- Logo -->
+    <a href="{:url('Index/index')}" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>MING</b></span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>MING_blog</b></span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">导航开关</span>
+      </a>
+
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <!-- Messages: style can be found in dropdown.less-->
+          <li class="dropdown messages-menu">
+              
+<!--            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-envelope-o"></i>
+              <span class="label label-success">4</span>
+            </a>-->
+              
+
+          </li>
+          <!-- Notifications: style can be found in dropdown.less -->
+          <!-- User Account: style can be found in dropdown.less -->
+          <li class="dropdown user user-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <img src="__STATIC__/module/admin/ext/adminlte/dist/img/user3-128x128.jpg" class="user-image" alt="User Image">
+              <span class="hidden-xs">{$member_info['nickname']}</span>
+            </a>
+            <ul class="dropdown-menu">
+              <!-- User image -->
+              <li class="user-header">
+                <img src="__STATIC__/module/admin/ext/adminlte/dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+
+                <p>
+                    {$member_info['nickname']}
+                  <small>上次登录时间：{$member_info['update_time']}</small>
+                </p>
+              </li>
+              <!-- Menu Footer-->
+              <li class="user-footer">
+                <div class="pull-left">
+                  <a href="#" class="btn btn-default btn-flat clear_cache" url="{:url('Login/clearCache')}">清理缓存</a>
+                </div>
+                <div class="pull-right">
+                  <a class="btn btn-default btn-flat logout" url="{:url('Login/logout')}">安全退出</a>
+                </div>
+              </li>
+            </ul>
+          </li>
+          
+          <!-- 控制栏切换按钮 -->
+          <li>
+            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
